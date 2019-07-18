@@ -1,0 +1,15 @@
+{
+    "required_api_version": "^2.0.0",
+    "name": "Extension List",
+    "description": "Search all extensions and call them",
+    "developer_name": "Rafael Alcaide",
+    "icon": "images/icon.png",
+    "preferences": [
+        {
+            "id": "exlist",
+            "type": "keyword",
+            "name": "Extension List",
+            "default_value": "el"
+        }
+    ]
+}
