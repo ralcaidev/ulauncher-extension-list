@@ -43,10 +43,8 @@ class KeywordQueryEventListener(EventListener):
         for dir in os.listdir(EXT_DIR):
             manifest_dir = EXT_DIR + dir + "/manifest.json"
 
-            log.info("dir: %s", manifest_dir)
             with open(manifest_dir) as manifest:
                 data = json.load(manifest)
-                log.info("data: %s", data)
                 for pref in data["preferences"]:
                     if pref["type"] == "keyword" and pref["id"] != "exlist":
                         extensions.append(Extension(pref["name"],
