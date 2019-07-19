@@ -5,4 +5,3 @@ mkdir -p $HOME${location}
 rm -rf $HOME${location}*
 cp -r * $HOME${location}
 ulauncher -v
-ulauncher-toggle
