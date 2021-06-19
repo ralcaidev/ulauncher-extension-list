@@ -8,7 +8,17 @@ import os
 import json
 import logging
 
-EXT_DIR = os.environ["HOME"] + "/.cache/ulauncher_cache/extensions/"
+ULAUNCHER_V4_EXT_DIR = os.environ["HOME"] + "/.cache/ulauncher_cache/extensions/"
+ULAUNCHER_V5_EXT_DIR = os.environ["HOME"] + "/.local/share/ulauncher/extensions/"
+
+CHECK_V4_FOLDER = os.path.isdir(ULAUNCHER_V4_EXT_DIR)
+
+if not CHECK_V4_FOLDER:
+    # Ulauncher v5 uses a different path for its extensions
+    EXT_DIR = ULAUNCHER_V5_EXT_DIR
+else:
+    EXT_DIR = ULAUNCHER_V4_EXT_DIR
+
 log = logging.getLogger(__name__)
 items = []
 
