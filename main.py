@@ -8,7 +8,7 @@ import os
 import json
 import logging
 
-EXT_DIR = os.environ["HOME"] + "/.cache/ulauncher_cache/extensions/"
+EXT_DIR = os.environ["HOME"] + "/.local/share/ulauncher/extensions/"
 log = logging.getLogger(__name__)
 items = []
 
